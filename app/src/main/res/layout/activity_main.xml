@@ -1,18 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/sky"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textSize="35sp"
+        android:textColorHighlight="@color/colorAccent"
+        android:textIsSelectable="true"
+        android:textColor="@color/red"
+        android:textAlignment="center"
+        android:text="@string/test_view"
+        android:id="@+id/headTextViewId"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:id="@+id/OpenionTextViewId"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textStyle="italic"
+        android:textSize="25sp"
+        android:textColorHighlight="@color/colorAccent"
+        android:textIsSelectable="true"
+        android:textColor="@color/orande"
+        android:text="@string/my_openion"
+        android:textAlignment="center"
+        android:padding="10dp"
+        />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp">
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/login_button"
+                android:id="@+id/loginButtId"
+                android:onClick="showMessage"
+                android:drawableLeft="@drawable/owner"
+                />
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="15dp"
+                android:textColor="@color/red"
+                android:text="@string/logout_button"
+                android:id="@+id/logoutButtId"
+                android:onClick="showMessage"
+                android:drawableLeft="@drawable/login"
+                />
+        </LinearLayout>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="@color/red"
+                android:textAlignment="center"
+                android:id="@+id/LoginTextId"
+                />
+
+        <ScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/LargeTextViewId"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textSize="20sp"
+                android:textColorHighlight="@color/colorAccent"
+                android:textIsSelectable="true"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/large_text"
+                android:padding="20dp"
+                />
+        </ScrollView>
+
+</LinearLayout>
