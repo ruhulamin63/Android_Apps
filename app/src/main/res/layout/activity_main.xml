@@ -23,7 +23,6 @@
         android:id="@+id/headTextViewId"
         android:padding="10dp"
         />
-
     <TextView
         android:id="@+id/OpenionTextViewId"
         android:layout_height="wrap_content"
@@ -37,47 +36,4 @@
         android:textAlignment="center"
         android:padding="10dp"
         />
-
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_margin="10dp">
-
-            <Button
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textStyle="bold"
-                android:textAllCaps="false"
-                android:textSize="15sp"
-                android:textColor="@color/colorPrimaryDark"
-                android:text="@string/login_button"
-                android:id="@+id/loginButtId"
-                android:onClick="showMessage"
-                android:drawableLeft="@drawable/owner"
-                />
-
-            <Button
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textAllCaps="false"
-                android:textSize="15dp"
-                android:textColor="@color/red"
-                android:text="@string/logout_button"
-                android:id="@+id/logoutButtId"
-                android:onClick="showMessage"
-                android:drawableLeft="@drawable/login"
-                />
-        </LinearLayout>
-
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:textStyle="bold"
-                android:textSize="30dp"
-                android:textColor="@color/red"
-                android:textAlignment="center"
-                android:id="@+id/LoginTextId"
-                />
 </LinearLayout>

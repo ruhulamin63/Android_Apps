@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     public void showMessage(View v){
         if(v.getId() == R.id.loginButtId){
 
-           
+
         }
         else if(v.getId() == R.id.logoutButtId){
 
