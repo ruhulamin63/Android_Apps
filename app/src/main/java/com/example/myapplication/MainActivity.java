@@ -24,31 +24,13 @@ public class MainActivity extends AppCompatActivity {
         loginText = this.<TextView>findViewById(R.id.LoginTextId);
 
     }
-        /*
-        Handler handler = new Handler();
-       loginButt.setOnClickListener(handler);
-       logoutButt.setOnClickListener(handler);
-       }
-        public class Handler implements View.OnClickListener {
-
-            @Override
-            public void onClick(View view) {
-                if(view.getId() == R.id.loginButtId){
-                    loginText.setText("Login button is clicked");
-                }
-                else if(view.getId() == R.id.logoutButtId){
-                    loginText.setText("Logout button is clicked now");
-                }
-            }
-        }
-        */
 
     public void showMessage(View v){
         if(v.getId() == R.id.loginButtId){
-            loginText.setText("Login button is clicked");
+
         }
         else if(v.getId() == R.id.logoutButtId){
-            loginText.setText("Logout button is clicked now");
+           
         }
     }
 }
