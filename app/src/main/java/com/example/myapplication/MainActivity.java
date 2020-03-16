@@ -32,20 +32,26 @@ public class MainActivity extends AppCompatActivity {
 
         }
         public void showMessage(View v){
-            String num1 = editText1.getText().toString();
-            String num2 = editText2.getText().toString();
 
-            //Converting int double
-            Double num_1 = Double.parseDouble(num1);
-            Double num_2 = Double.parseDouble(num2);
+            try
+            {
+                String num1 = editText1.getText().toString();
+                String num2 = editText2.getText().toString();
 
-            if(v.getId() == R.id.addButtId){
-                Double sum = num_1 + num_2;
-                result.setText("Result : " +sum);
-            }
-            else if(v.getId() == R.id.subButtId){
-                Double sum = num_1 - num_2;
-                result.setText("Result : " +sum);
+                //Converting int double
+                Double num_1 = Double.parseDouble(num1);
+                Double num_2 = Double.parseDouble(num2);
+
+                if(v.getId() == R.id.addButtId){
+                    Double sum = num_1 + num_2;
+                    result.setText("Result : " +sum);
+                }
+                else if(v.getId() == R.id.subButtId){
+                    Double sum = num_1 - num_2;
+                    result.setText("Result : " +sum);
+                }
+            }catch (Exception e){
+                Toast.makeText(MainActivity.this,"Please enter your number",Toast.LENGTH_SHORT).show();
             }
         }
     }
