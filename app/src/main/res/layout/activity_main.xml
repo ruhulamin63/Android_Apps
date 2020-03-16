@@ -80,22 +80,4 @@
                 android:textAlignment="center"
                 android:id="@+id/LoginTextId"
                 />
-
-        <ScrollView
-            android:layout_height="match_parent"
-            android:layout_width="match_parent">
-
-            <TextView
-                android:id="@+id/LargeTextViewId"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:textSize="20sp"
-                android:textColorHighlight="@color/colorAccent"
-                android:textIsSelectable="true"
-                android:textColor="@color/colorPrimary"
-                android:text="@string/large_text"
-                android:padding="20dp"
-                />
-        </ScrollView>
-
 </LinearLayout>
