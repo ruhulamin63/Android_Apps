@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -30,15 +31,11 @@ public class MainActivity extends AppCompatActivity {
     public void showMessage(View v){
         if(v.getId() == R.id.loginButtId){
 
-            Toast toast = Toast.makeText(MainActivity.this,"Login button is clicked",Toast.LENGTH_SHORT);
-                toast.setGravity(Gravity.CENTER,0,0);
-                toast.show();
+            Log.d("tag","Login button is clicked");
         }
         else if(v.getId() == R.id.logoutButtId){
 
-            Toast toast = Toast.makeText(MainActivity.this,"Logout button is clicked",Toast.LENGTH_SHORT);
-            toast.setGravity(Gravity.CENTER,0,0);
-            toast.show();
+            Log.d("tag","Logout button is clicked");
         }
     }
 }
