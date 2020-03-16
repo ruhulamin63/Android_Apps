@@ -31,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
     public void showMessage(View v){
         if(v.getId() == R.id.loginButtId){
 
-            Log.d("tag","Login button is clicked");
+           
         }
         else if(v.getId() == R.id.logoutButtId){
 
-            Log.d("tag","Logout button is clicked");
+
         }
     }
 }
