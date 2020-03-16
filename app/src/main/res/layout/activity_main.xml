@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/sky"
+    android:padding="30dp"
     tools:context=".MainActivity">
 
 
@@ -21,7 +22,7 @@
         android:textAlignment="center"
         android:text="@string/test_view"
         android:id="@+id/headTextViewId"
-        android:padding="10dp"
+        android:layout_marginBottom="15dp"
         />
     <TextView
         android:id="@+id/OpenionTextViewId"
@@ -36,4 +37,62 @@
         android:textAlignment="center"
         android:padding="10dp"
         />
+
+        <EditText
+            android:id="@+id/editeText1Id"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textCursorDrawable="@null"
+            android:hint="@string/edit_text1"
+            android:inputType="textCapCharacters"
+            />
+
+        <EditText
+            android:id="@+id/editeText2Id"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textCursorDrawable="@null"
+            android:hint="@string/edit_text1"
+            />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        >
+
+        <Button
+            android:id="@+id/addButtId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_butt"
+            android:background="@color/colorPrimary"
+            android:layout_margin="3dp"
+            />
+
+        <Button
+            android:id="@+id/subButtId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@color/orande"
+            android:text="@string/sub_butt"
+            android:layout_margin="3dp"
+
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textStyle="bold"
+
+        />
+
 </LinearLayout>
