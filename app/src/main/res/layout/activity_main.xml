@@ -57,6 +57,7 @@
             android:textStyle="bold"
             android:textCursorDrawable="@null"
             android:hint="@string/edit_text1"
+            android:inputType="textCapCharacters"
             />
 
     <LinearLayout
@@ -72,6 +73,7 @@
             android:text="@string/add_butt"
             android:background="@color/colorPrimary"
             android:layout_margin="3dp"
+            android:onClick="showMessage"
             />
 
         <Button
@@ -82,17 +84,17 @@
             android:background="@color/orande"
             android:text="@string/sub_butt"
             android:layout_margin="3dp"
+            android:onClick="showMessage"
 
             />
     </LinearLayout>
 
     <TextView
         android:id="@+id/resultId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="10dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textSize="20dp"
         android:textStyle="bold"
-
         />
 
 </LinearLayout>

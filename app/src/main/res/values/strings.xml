@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="test_view">Text View</string>
-    <string name="my_openion">I am interested in my android course in online view.</string>
+    <string name="test_view">Calculator</string>
+    <string name="my_openion">I am interested create in android apps.</string>
     <string name="edit_text1">Enter your first number</string>
     <string name="edit_text2">Enter your secound number</string>
     <string name="add_butt">Add</string>
