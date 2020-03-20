@@ -1,11 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="test_view">Calculator</string>
+    <string name="test_view">Image View</string>
     <string name="my_openion">I am interested create in android apps.</string>
-    <string name="edit_text1">Enter your first number</string>
-    <string name="edit_text2">Enter your secound number</string>
-    <string name="add_butt">Add</string>
-    <string name="sub_butt">Sub</string>
-    <string name="mul_butt">Mul</string>
-    <string name="div_butt">Div</string>
+
+
 </resources>
