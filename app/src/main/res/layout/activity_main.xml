@@ -4,40 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/sky"
+    android:orientation="vertical"
     android:padding="30dp"
     tools:context=".MainActivity">
 
 
     <TextView
-        android:layout_height="wrap_content"
+        android:id="@+id/headTextViewId"
         android:layout_width="match_parent"
-        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/test_view"
+        android:textAlignment="center"
         android:textAllCaps="true"
-        android:textSize="35sp"
+        android:textColor="@color/red"
         android:textColorHighlight="@color/colorAccent"
         android:textIsSelectable="true"
-        android:textColor="@color/red"
-        android:textAlignment="center"
-        android:text="@string/test_view"
-        android:id="@+id/headTextViewId"
-        android:layout_marginBottom="15dp"
-        />
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/OpenionTextViewId"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:textStyle="italic"
-        android:textSize="25sp"
-        android:textColorHighlight="@color/colorAccent"
-        android:textIsSelectable="true"
-        android:textColor="@color/orange"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
         android:text="@string/my_openion"
         android:textAlignment="center"
-        android:padding="10dp"
-        />
+        android:textColor="@color/orange"
+        android:textColorHighlight="@color/colorAccent"
+        android:textIsSelectable="true"
+        android:textSize="25sp"
+        android:textStyle="italic" />
 
 
+        <ImageView
+            android:id="@+id/imageView1Id"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:onClick="showMessage"
+            android:scaleType="fitXY"
+            android:src="@drawable/sample"
+            />
 
+        <ImageView
+            android:id="@+id/imageView2Id"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:onClick="showMessage"
+            android:scaleType="fitXY"
+            android:src="@drawable/symbol"
+            />
 </LinearLayout>
