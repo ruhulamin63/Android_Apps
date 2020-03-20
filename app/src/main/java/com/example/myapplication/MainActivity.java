@@ -47,8 +47,16 @@ public class MainActivity extends AppCompatActivity {
                     result.setText("Result : " +sum);
                 }
                 else if(v.getId() == R.id.subButtId){
-                    Double sum = num_1 - num_2;
-                    result.setText("Result : " +sum);
+                    Double sub = num_1 - num_2;
+                    result.setText("Result : " +sub);
+                }
+                else if(v.getId() == R.id.mulButtId){
+                    Double mul = num_1 * num_2;
+                    result.setText("Result : " +mul);
+                }
+                else if(v.getId() == R.id.divButtId){
+                    Double div = num_1 / num_2;
+                    result.setText("Result : " +div);
                 }
             }catch (Exception e){
                 Toast.makeText(MainActivity.this,"Please enter your number",Toast.LENGTH_SHORT).show();

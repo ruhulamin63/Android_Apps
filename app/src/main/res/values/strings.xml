@@ -6,4 +6,6 @@
     <string name="edit_text2">Enter your secound number</string>
     <string name="add_butt">Add</string>
     <string name="sub_butt">Sub</string>
+    <string name="mul_butt">Mul</string>
+    <string name="div_butt">Div</string>
 </resources>
