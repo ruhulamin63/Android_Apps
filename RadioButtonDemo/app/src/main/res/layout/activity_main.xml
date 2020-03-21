@@ -9,19 +9,16 @@
     android:background="@drawable/ic_launcher_foreground"
     tools:context=".MainActivity">
 
-    <RatingBar
-        android:id="@+id/RatingBarId"
-        android:layout_width="wrap_content"
+    <SeekBar
+        android:id="@+id/SeekBarId"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:progressBackgroundTint="@android:color/holo_green_light"
-        android:progressTint="@android:color/holo_orange_dark"
-        android:rating="1"
-        android:numStars="5"
-        android:stepSize="1"
-        android:layout_margin="50dp"
+        android:max="10"
         />
     <TextView
         android:id="@+id/textViewId"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
