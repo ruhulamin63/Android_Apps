@@ -7,30 +7,32 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity<imageView extends View> extends AppCompatActivity {
+import static com.example.myapplication.R.id.buttonId;
 
-    private imageView imageView1,imageView2;
+public class MainActivity extends AppCompatActivity {
 
-        @SuppressLint("WrongViewCast")
+    private loginButton button;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
-            imageView1 = this.<imageView> findViewById(R.id.imageView1Id);
-            imageView2 = this.<imageView>findViewById(R.id.imageView2Id);
+            button = this.<loginButton>findViewById(R.id.buttonId);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    LayoutInflater inflater = getLayoutInflater();
+                    inflater.inflate(R.layout.toast, findViewById(R.layout.toast_id));
+                }
+            });
         }
-        public void showMessage(View v) {
-            if (v.getId() == R.id.imageView1Id) {
-                Toast.makeText(MainActivity.this, "Wow pic", Toast.LENGTH_SHORT).show();
-            } else if (v.getId() == R.id.imageView2Id) {
-                Toast.makeText(MainActivity.this, "Nice pic", Toast.LENGTH_SHORT).show();
-            }
-        }
+
     }
