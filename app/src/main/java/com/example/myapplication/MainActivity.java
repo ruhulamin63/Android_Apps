@@ -18,21 +18,12 @@ import static com.example.myapplication.R.id.buttonId;
 
 public class MainActivity extends AppCompatActivity {
 
-    private loginButton button;
-
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
-            button = this.<loginButton>findViewById(R.id.buttonId);
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    LayoutInflater inflater = getLayoutInflater();
-                    inflater.inflate(R.layout.toast, findViewById(R.layout.toast_id));
-                }
-            });
+
         }
 
     }

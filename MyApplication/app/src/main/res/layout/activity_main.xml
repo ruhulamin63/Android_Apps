@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="horizontal"
-    android:gravity="center"
+   android:padding="50dp"
     >
     <Button
         android:id="@+id/buttonId"
@@ -15,6 +15,7 @@
         android:text="@string/button"
         android:textAllCaps="false"
         android:textSize="20dp"
+        android:onClick="showMessage"
         />
 
 

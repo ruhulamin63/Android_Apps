@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/custom_id"
+    >
 
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/login"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="35dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/toast_text"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="50dp"
+        />
 </LinearLayout>

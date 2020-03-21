@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="button">Login</string>
-    <string name="toast_text">You have to login</string>
 
 </resources>
