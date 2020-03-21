@@ -7,13 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button;
-    private RadioGroup radioGroup;
-    private RadioButton genderButton;
+    private RatingBar ratingBar;
     private TextView resulTtextView;
 
     @Override
@@ -21,17 +20,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = findViewById(R.id.ButtonId);
-        radioGroup = findViewById(R.id.radioGroupId);
+        ratingBar = findViewById(R.id.RatingBarId);
         resulTtextView = findViewById(R.id.textViewId);
+            resulTtextView.setText("Value : "+ratingBar.getProgress());
 
+            ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+                @Override
+                public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
+                    resulTtextView.setText("Value : "+ratingBar.getProgress());
+                }
+            });
+        }
     }
-    public void showMessage(View v){
-       int selectedId = radioGroup.getCheckedRadioButtonId();
-
-        genderButton = findViewById(selectedId);
-        String value = genderButton.getText().toString();
-            resulTtextView.setText("You have selected : "+value);
-    }
-
-}
