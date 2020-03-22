@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">RadioButtonDemo</string>
-    <string name="male_text">Male</string>
-    <string name="female_text">Female</string>
-    <string name="button_view">Show</string>
+    <string name="switch_text">Wifi</string>
+
 </resources>
