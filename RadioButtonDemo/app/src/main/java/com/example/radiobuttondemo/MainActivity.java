@@ -3,7 +3,11 @@ package com.example.radiobuttondemo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
@@ -17,25 +21,19 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Switch aSwitch;
+    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-            aSwitch = findViewById(R.id.SwitchId);
+            webView = this.<WebView>findViewById(R.id.webViewId);
 
-            aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                    if(b){
-                        Toast.makeText(MainActivity.this,"On",Toast.LENGTH_SHORT).show();
-                    }else {
-                        Toast.makeText(MainActivity.this,"Off",Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
+               WebSettings webSettings = webView.getSettings();
+                    webSettings.setJavaScriptEnabled(true);
 
+                    webView.setWebViewClient(new WebViewClient());
+                    webView.loadUrl("https://www.aiub.edu/");
         }
     }
