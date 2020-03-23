@@ -1,0 +1,2 @@
+rootProject.name='Time_Picker_&_Dialog_Demo'
+include ':app'
