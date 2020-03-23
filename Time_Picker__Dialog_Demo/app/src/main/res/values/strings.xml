@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Time_Picker_&amp;_Dialog_Demo</string>
+    <string name="app_name">Time Dialog</string>
     <string name="button_View">Show Time</string>
 </resources>

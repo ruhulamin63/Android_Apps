@@ -2,6 +2,7 @@ package com.example.time_picker__dialog_demo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +12,7 @@ import android.widget.TimePicker;
 public class MainActivity extends AppCompatActivity {
 
     private Button button;
-    private TimePicker timePicker;
+    private TimePickerDialog timePickerDialog;
     private TextView textView;
 
     @Override
@@ -20,16 +21,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         button = this.<Button>findViewById(R.id.buttonId);
-        timePicker = this.<TimePicker>findViewById(R.id.timePickerId);
         textView = this.<TextView>findViewById(R.id.timeViewId);
-
-        timePicker.setIs24HourView(true);
     }
     public void showMessage(View v){
 
-        String time = timePicker.getCurrentHour() + ":" + timePicker.getCurrentMinute();
+        TimePicker timePicker = new TimePicker(MainActivity.this);
+           int CurrentHoure = timePicker.getCurrentHour();
+           int CurrentMinute = timePicker.getCurrentMinute();
 
-        textView.setText("Selected Time : " + time);
-       // textView.setText(time);
+        timePickerDialog = new TimePickerDialog(MainActivity.this,
+                new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                        textView.setText("Select Time : "+i + ":" + i1);
+                    }
+                },CurrentHoure,CurrentMinute,true);
+        timePickerDialog.show();
     }
 }
