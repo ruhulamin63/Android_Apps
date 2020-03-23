@@ -6,26 +6,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
+    android:gravity="center"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/buttonId"
+    <AnalogClock
+        android:id="@+id/AnalogId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_View"
-        android:textAllCaps="false"
-        android:textSize="20dp"
-        android:layout_margin="20sp"
-        android:textStyle="bold"
+        android:background="@color/colorPrimaryDark"
         android:onClick="showMessage"
         />
-
-    <TextView
-        android:id="@+id/timeViewId"
-        android:layout_width="match_parent"
+    <TextClock
+        android:id="@+id/TextClockId"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:textSize="30dp"
-        android:textAlignment="center"
-        android:textAllCaps="false"
+        android:onClick="showMessage"
         />
 </LinearLayout>

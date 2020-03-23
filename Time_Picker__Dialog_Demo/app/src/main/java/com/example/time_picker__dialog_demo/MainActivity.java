@@ -5,37 +5,32 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AnalogClock;
 import android.widget.Button;
+import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button;
-    private TimePickerDialog timePickerDialog;
-    private TextView textView;
+    private AnalogClock analogClock;
+    private TextClock textClock;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = this.<Button>findViewById(R.id.buttonId);
-        textView = this.<TextView>findViewById(R.id.timeViewId);
+        analogClock = findViewById(R.id.AnalogId);
+        textClock = findViewById(R.id.TextClockId);
     }
     public void showMessage(View v){
-
-        TimePicker timePicker = new TimePicker(MainActivity.this);
-           int CurrentHoure = timePicker.getCurrentHour();
-           int CurrentMinute = timePicker.getCurrentMinute();
-
-        timePickerDialog = new TimePickerDialog(MainActivity.this,
-                new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker timePicker, int i, int i1) {
-                        textView.setText("Select Time : "+i + ":" + i1);
-                    }
-                },CurrentHoure,CurrentMinute,true);
-        timePickerDialog.show();
+        if(v.getId() == R.id.AnalogId){
+            Toast.makeText(MainActivity.this,"Analog Colock",Toast.LENGTH_SHORT).show();
+        }
+        else if(v.getId() == R.id.TextClockId){
+            Toast.makeText(MainActivity.this,"Text Colock",Toast.LENGTH_SHORT).show();
+        }
     }
 }
