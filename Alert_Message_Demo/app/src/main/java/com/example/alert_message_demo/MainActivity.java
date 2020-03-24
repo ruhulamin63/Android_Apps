@@ -57,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            // Create show alertDialog menue
+            // Create show alertDialog menu
+                // alertDialogBuilder.create().show();
             AlertDialog alertDialog = alertDialogBuilder.create();
                 alertDialog.show();
     }
