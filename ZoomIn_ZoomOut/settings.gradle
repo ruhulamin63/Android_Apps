@@ -1,0 +1,2 @@
+rootProject.name='ZoomIn_ZoomOut'
+include ':app'
