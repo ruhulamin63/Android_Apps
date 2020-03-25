@@ -6,9 +6,23 @@
     android:layout_height="match_parent"
     android:padding="20dp"
     android:orientation="vertical"
-    android:gravity="center"
     android:background="#148e73"
     tools:context=".MainActivity">
+
+    <AnalogClock
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="10dp"
+        />
+    <DigitalClock
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#8C0202"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
 
     <Button
         android:id="@+id/bdButton"
