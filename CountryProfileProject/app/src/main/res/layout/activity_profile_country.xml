@@ -11,10 +11,12 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
+        android:weightSum="2"
         android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/imageId"
+            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:scaleType="fitXY"
@@ -23,10 +25,12 @@
             />
         <TextView
             android:id="@+id/textId"
+            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textStyle="normal"
             android:textSize="20sp"
+            android:textIsSelectable="true"
             />
     </LinearLayout>
 
