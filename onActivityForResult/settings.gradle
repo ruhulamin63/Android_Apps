@@ -1,0 +1,2 @@
+rootProject.name='onActivityForResult'
+include ':app'
