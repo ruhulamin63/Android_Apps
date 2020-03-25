@@ -1,0 +1,2 @@
+rootProject.name='CountryProfileProject'
+include ':app'

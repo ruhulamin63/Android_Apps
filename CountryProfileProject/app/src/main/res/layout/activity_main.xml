@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#148e73"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/bdButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_bd"
+        android:background="#673AB7"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/bd_flag"
+        android:layout_marginBottom="10dp"
+        android:onClick="onClickButton"
+        />
+
+    <Button
+        android:id="@+id/indiaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_india"
+        android:background="#DBED29"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/india_flag"
+        android:layout_marginBottom="10dp"
+        android:onClick="onClickButton"
+        />
+
+    <Button
+        android:id="@+id/usaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_usa"
+        android:background="#B13660"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/usa_flag"
+        android:onClick="onClickButton"
+        />
+</LinearLayout>
