@@ -20,6 +20,8 @@ public class FirstActivity extends AppCompatActivity {
     }
     public void onClickFirstActivity(View v){
         Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
+
+            intent.putExtra("tag","I am second activity open here");
             startActivity(intent);
     }
 }

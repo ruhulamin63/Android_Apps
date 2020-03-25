@@ -9,16 +9,6 @@
     android:gravity="center"
     tools:context=".FirstActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/first_activity_text"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#ff22"
-        android:layout_marginBottom="20dp"
-        />
-
     <Button
         android:id="@+id/buttonId"
         android:layout_width="wrap_content"
