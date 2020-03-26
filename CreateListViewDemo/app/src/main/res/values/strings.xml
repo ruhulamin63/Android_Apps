@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">CreateListViewDemo</string>
-    <string name="simple_text_view">Hello there</string>
+    <string name="simple_text">Here simple text</string>
     <string-array name="country_name">
+        <item>Bangladesh</item>
+        <item>India</item>
+        <item>USA</item>
         <item>Afghanistan</item>
         <item>China</item>
         <item>Algeria</item>
@@ -17,4 +20,7 @@
         <item>Peru</item>
         <item>Philippines</item>
     </string-array>
+
+    <string name="alert_title">Exit</string>
+    <string name="alert_message">Are you sure ?</string>
 </resources>
