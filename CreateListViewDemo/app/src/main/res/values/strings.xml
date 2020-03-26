@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CreateListViewDemo</string>
+    <string name="simple_text_view">Hello there</string>
+    <string-array name="country_name">
+        <item>Afghanistan</item>
+        <item>China</item>
+        <item>Algeria</item>
+        <item>Brazil</item>
+        <item>Angola</item>
+        <item>Cambodia</item>
+        <item>Armenia</item>
+        <item>Canada</item>
+        <item>Belgium</item>
+        <item>Pakistan</item>
+        <item>Portugal</item>
+        <item>Panama</item>
+        <item>Peru</item>
+        <item>Philippines</item>
+    </string-array>
+</resources>

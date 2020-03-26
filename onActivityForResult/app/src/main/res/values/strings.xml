@@ -3,4 +3,6 @@
     <string name="button1_text">Go to second activity</string>
     <string name="button2_text">Go to first activity</string>
     <string name="edit_text">Enter your name</string>
+    <string name="alert_title">Exit</string>
+    <string name="alert_message">Are you sure ?</string>
 </resources>
