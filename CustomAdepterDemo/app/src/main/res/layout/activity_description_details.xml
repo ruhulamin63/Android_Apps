@@ -5,31 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    android:orientation="vertical"
     tools:context=".DescriptionDetails">
 
     <LinearLayout
         android:orientation="vertical"
+        android:weightSum="2"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageId"
+            android:id="@+id/locationImageId"
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="0dp"
             android:scaleType="fitXY"
             android:src="@mipmap/ic_launcher_round"
             android:layout_marginBottom="10sp"
             />
         <TextView
-            android:id="@+id/textId"
+            android:id="@+id/locationTextId"
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:textStyle="normal"
             android:textSize="20sp"
-            android:text="@string/lalbagh_kella"
             android:textIsSelectable="true"
             />
     </LinearLayout>
-
 </ScrollView>

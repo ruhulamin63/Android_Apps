@@ -23,25 +23,15 @@ import java.util.zip.Inflater;
 public class MainActivity extends AppCompatActivity {
 
     private ListView listView;
+    private String[] countryNames;
+    private String[] countryDescription;
 
-    private String[] countryNames; /* = {"Bangladesh","India","USA","Afghanistan","China","Algeria",
-            "Brazil","Angola","Canada","Belgium","Pakistan","Portugal","Peru"}; */
+    private int[] flags = { R.drawable.bd_flag,R.drawable.india_flag,R.drawable.usa_flag, R.drawable.china_flag,
+                            R.drawable.brazil_flag, R.drawable.canada_flag, R.drawable.pakistan_flag };
 
-    private String[] countryDescription; /* = {"Bangladesh description","India description","USA description",
-                                            "Afghanistan description","China description","Algeria description",
-                                            "Brazil description","Angola description","Canada description",
-                                            "Belgium description","Pakistan description","Portugal description","Peru description"}; */
-
-    private int[] flags = { R.drawable.bd_flag,R.drawable.india_flag,R.drawable.usa_flag,
-                            R.drawable.afghanistan_flag,R.drawable.china_flag,R.drawable.algeria_flag,
-                            R.drawable.brazil_flag,R.drawable.angola_flag,R.drawable.canada_flag,
-                            R.drawable.belgium_flag,R.drawable.pakistan_flag,R.drawable.portugal_flag,R.drawable.peru_flag
-                          };
-
-    //private LayoutInflater inflater;
-
-    //private String[] locationName;
-   // private int[] locationImages = new int[]{R.drawable.lalbag_kella, R.drawable.tajmahal_icon, R.drawable.space_icon};
+    private String[] locationName;
+    private int[] locationImages = {R.drawable.lalbag_kella, R.drawable.tajmahal_icon, R.drawable.space_icon,
+                                    R.drawable.chiness_rice,R.drawable.brazilian_soccer,R.drawable.canadian_tree,R.drawable.pakistan_islamabad };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         countryNames = getResources().getStringArray(R.array.country_names);
         countryDescription = getResources().getStringArray(R.array.country_details_text);
 
-        //locationName = getResources().getStringArray(R.array.description_text);
+         locationName = getResources().getStringArray(R.array.country_location_details);
 
         CustomAdepter adepter = new CustomAdepter(MainActivity.this,countryNames,flags,countryDescription);
             listView.setAdapter(adepter);
@@ -66,56 +56,12 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,value,Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),DescriptionDetails.class);
-                    intent.putExtra("name",countryNames[i]);
-                   // intent.putExtra("name",countryDescription[i]);
-                    intent.putExtra("image",flags[i]);
+                intent.putExtra("image",locationImages[i]);
+                    intent.putExtra("name",locationName[i]);
                     startActivity(intent);
             }
         });
     }
-
-/*
-    private class CustomAdepter extends BaseAdapter {
-        @Override
-        public int getCount() {
-            return countryNames.length;
-        }
-
-        @Override
-        public Object getItem(int i) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int i) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int i, View view, ViewGroup viewGroup) {
-
-            if(view == null) {
-                // Converting layout and input view
-                inflater = (LayoutInflater) getSystemService(MainActivity.LAYOUT_INFLATER_SERVICE); // convert layout and import the view
-                view = inflater.inflate(R.layout.sample_view, viewGroup, false); // return view
-            }
-
-            // View view1 = getLayoutInflater().inflate(R.layout.sample_view,null);
-
-            //getting view in row_data
-            TextView name = view.findViewById(R.id.countryNameId);
-            TextView name1 = view.findViewById(R.id.countryDescriptionId);
-            ImageView image = view.findViewById(R.id.imageId);
-
-            name.setText(countryNames[i]);
-            name1.setText(countryDescription[i]);
-            image.setImageResource(flags[i]);
-
-            return view;
-        }
-    }
- */
-
 
     @Override
     public void onBackPressed() {

@@ -9,13 +9,13 @@ import android.widget.TextView;
 
 class CustomAdepter extends BaseAdapter {
 
-    int[] flags;
-    String[] countryNames;
-    String[] countryDescription;
-    MainActivity mainActivity;
+    private int[] flags;
+    private String[] countryNames;
+    private String[] countryDescription;
+    private MainActivity mainActivity;
     private LayoutInflater inflater; // Convert layout and return view
 
-    // create contractor method
+    // create contractor and show MainActivity
     public CustomAdepter(MainActivity mainActivity, String[] countryNames, int[] flags, String[] countryDescription) {
 
         this.mainActivity = mainActivity;
@@ -26,7 +26,7 @@ class CustomAdepter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return countryNames.length;
+        return countryNames.length; //Using flag or countryNames
     }
 
     @Override
@@ -43,12 +43,10 @@ class CustomAdepter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
 
         if(view == null) {
-            // Converting layout and input view
+
             inflater = (LayoutInflater) mainActivity.getSystemService(MainActivity.LAYOUT_INFLATER_SERVICE); // convert layout and import the view
             view = inflater.inflate(R.layout.sample_view, viewGroup, false); // return view
         }
-
-        // View view1 = getLayoutInflater().inflate(R.layout.sample_view,null);
 
         //getting view in row_data
         TextView name = view.findViewById(R.id.countryNameId);

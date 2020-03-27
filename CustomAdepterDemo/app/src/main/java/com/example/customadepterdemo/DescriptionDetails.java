@@ -10,24 +10,30 @@ import android.widget.TextView;
 
 public class DescriptionDetails extends AppCompatActivity {
 
-    private TextView textView;
     private ImageView imageView;
+    private TextView textView;
 
+   // private int[] locationImages = {R.drawable.lalbag_kella, R.drawable.tajmahal_icon, R.drawable.space_icon};
+   // private String[] locationName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description_details);
 
-        textView = this.<TextView>findViewById(R.id.textId);
-        imageView = this.<ImageView>findViewById(R.id.imageId);
+        imageView = this.<ImageView>findViewById(R.id.locationImageId);
+        textView = this.<TextView>findViewById(R.id.locationTextId);
 
+
+       // locationName = getResources().getStringArray(R.array.country_details_text);
+
+        //got putExtra data
         Intent intent = getIntent();
-        String receivedName =  intent.getStringExtra("name");
-        // String receivedNameDetails =  intent.getStringExtra("name");
+
         int receivedImage = intent.getIntExtra("image",0);
+        String receivedName =  intent.getStringExtra("name");
+
         textView.setText(receivedName);
-       // textView.setText(receivedNameDetails);
         imageView.setImageResource(receivedImage);
     }
 }
