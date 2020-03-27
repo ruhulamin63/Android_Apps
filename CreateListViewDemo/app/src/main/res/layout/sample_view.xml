@@ -10,7 +10,7 @@
         android:layout_height="50dp"
         android:padding="10dp"
         android:gravity="center_vertical"
-        android:text="@string/simple_text_view"
+        android:text="@string/simple_text"
         android:textSize="20sp"
         android:textStyle="bold"
 

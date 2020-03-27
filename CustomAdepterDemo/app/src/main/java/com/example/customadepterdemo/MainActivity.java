@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
                             R.drawable.brazil_flag, R.drawable.canada_flag, R.drawable.pakistan_flag };
 
     private String[] locationName;
-    private int[] locationImages = {R.drawable.lalbag_kella, R.drawable.tajmahal_icon, R.drawable.space_icon,
-                                    R.drawable.chiness_rice,R.drawable.brazilian_soccer,R.drawable.canadian_tree,R.drawable.pakistan_islamabad };
+    private int[] locationImages = {R.drawable.lalbag_kella, R.drawable.tajmahal_icon, R.drawable.dog,
+            R.drawable.chiness_rice,R.drawable.brazilian_soccer,R.drawable.canada,R.drawable.pakistan_islamabad };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,value,Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),DescriptionDetails.class);
-                intent.putExtra("image",locationImages[i]);
+                    intent.putExtra("image",locationImages[i]);
                     intent.putExtra("name",locationName[i]);
                     startActivity(intent);
             }
