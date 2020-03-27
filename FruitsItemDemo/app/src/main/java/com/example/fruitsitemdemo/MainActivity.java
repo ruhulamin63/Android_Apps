@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Toast.makeText(getApplicationContext(),fruitNames[i],Toast.LENGTH_LONG).show();
+
                     Intent intent = new Intent(getApplicationContext(),ListdateActivity.class);
                     intent.putExtra("name",fruitNames[i]);
                     intent.putExtra("image",fruitImages[i]);
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private class CustomAdepter extends BaseAdapter {
         @Override
         public int getCount() {
+
             return fruitImages.length;
         }
 

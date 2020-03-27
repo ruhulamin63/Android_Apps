@@ -1,6 +1,5 @@
 package com.example.customadepterdemo;
 
-import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,9 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.zip.Inflater;
-
-public class CustomAdepter extends BaseAdapter {
+class CustomAdepter extends BaseAdapter {
 
     int[] flags;
     String[] countryNames;
@@ -29,7 +26,6 @@ public class CustomAdepter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        // return all string names
         return countryNames.length;
     }
 
@@ -43,7 +39,7 @@ public class CustomAdepter extends BaseAdapter {
         return 0;
     }
 
-    @SuppressLint("ServiceCast")
+    @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
         if(view == null) {
@@ -51,13 +47,17 @@ public class CustomAdepter extends BaseAdapter {
             inflater = (LayoutInflater) mainActivity.getSystemService(MainActivity.LAYOUT_INFLATER_SERVICE); // convert layout and import the view
             view = inflater.inflate(R.layout.sample_view, viewGroup, false); // return view
         }
-        ImageView imageView = view.findViewById(R.id.imageId);
-        TextView textView = view.findViewById(R.id.countryNameId);
-        TextView textView1 = view.findViewById(R.id.countryDescriptionId);
 
-        imageView.setImageResource(flags[i]); // i means position
-            textView.setText(countryNames[i]);
-            textView1.setText(countryDescription[i]);
+        // View view1 = getLayoutInflater().inflate(R.layout.sample_view,null);
+
+        //getting view in row_data
+        TextView name = view.findViewById(R.id.countryNameId);
+        TextView name1 = view.findViewById(R.id.countryDescriptionId);
+        ImageView image = view.findViewById(R.id.imageId);
+
+        name.setText(countryNames[i]);
+        name1.setText(countryDescription[i]);
+        image.setImageResource(flags[i]);
 
         return view;
     }
