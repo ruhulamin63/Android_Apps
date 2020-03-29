@@ -1,30 +1,35 @@
 package com.example.customadepterdemo;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ListView listView;
-    private String[] countryNames;
-    private String[] countryDescription;
+    ListView listView;
+    String[] countryNames;
+    String[] countryDescription;
 
     private int[] flags = { R.drawable.bd_flag,R.drawable.india_flag,R.drawable.usa_flag, R.drawable.china_flag,
                             R.drawable.brazil_flag, R.drawable.canada_flag, R.drawable.pakistan_flag };
@@ -38,17 +43,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listView = findViewById(R.id.listViewId);
+        // find list view
+        listView = this.<ListView>findViewById(R.id.listViewId);
+
 
         // get countryName & countryDescription
         countryNames = getResources().getStringArray(R.array.country_names);
         countryDescription = getResources().getStringArray(R.array.country_details_text);
-
+        // get string country location details
          locationName = getResources().getStringArray(R.array.country_location_details);
 
-        CustomAdepter adepter = new CustomAdepter(MainActivity.this,countryNames,flags,countryDescription);
+         final CustomAdepter adepter = new CustomAdepter(MainActivity.this,countryNames,flags,countryDescription);
             listView.setAdapter(adepter);
 
+
+    // Create by Item ClickListener
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -63,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    // Create by BackPressed button
     @Override
     public void onBackPressed() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);

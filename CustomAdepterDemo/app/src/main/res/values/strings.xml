@@ -2,6 +2,12 @@
     <string name="app_name">CustomAdepterDemo</string>
     <string name="country_name">Bangladesh</string>
     <string name="country_details">Click here to description</string>
+
+    <string name="alert_title">Exit</string>
+    <string name="alert_message">Are you sure ?</string>
+
+    <string name="search_title">Search your country name</string>
+
     <string-array name="country_names">
         <item>Bangladesh</item>
         <item>India</item>
@@ -21,9 +27,6 @@
         <item>Canada description</item>
         <item>Pakistan description</item>
     </string-array>
-
-    <string name="alert_title">Exit</string>
-    <string name="alert_message">Are you sure ?</string>
 
     <string-array name="country_location_details">
         <item>

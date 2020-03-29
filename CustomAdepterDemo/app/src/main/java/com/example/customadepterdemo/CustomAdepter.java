@@ -7,6 +7,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Optional;
+
 class CustomAdepter extends BaseAdapter {
 
     private int[] flags;
@@ -26,9 +28,8 @@ class CustomAdepter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return countryNames.length; //Using flag or countryNames
+        return countryNames.length;  //Using flag or countryNames
     }
-
     @Override
     public Object getItem(int i) {
         return null;
