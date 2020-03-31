@@ -1,0 +1,4 @@
+#Mon Mar 30 19:24:26 BDT 2020
+base.0=E\:\\Android_Projects\\Android_Apps\\ListViewAdepter\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

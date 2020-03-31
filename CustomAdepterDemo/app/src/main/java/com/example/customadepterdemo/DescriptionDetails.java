@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 public class DescriptionDetails extends AppCompatActivity {
 
-    private ImageView imageView;
-    private TextView textView;
+     ImageView imageView;
+     TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

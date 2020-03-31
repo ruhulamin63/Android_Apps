@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         // get countryName & countryDescription
         countryNames = getResources().getStringArray(R.array.country_names);
         countryDescription = getResources().getStringArray(R.array.country_details_text);
+
         // get string country location details
          locationName = getResources().getStringArray(R.array.country_location_details);
 

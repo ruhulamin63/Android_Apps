@@ -13,3 +13,4 @@
 .externalNativeBuild
 .cxx
 TimePicker__dDemo/.idea/workspace.xml
+*.xml
